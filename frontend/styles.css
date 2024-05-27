@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #008080;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: #006666;
+}
+
+.button > svg {
+  margin-right: 5px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  max-width: 400px;
+  max-height: 300px;
+  margin-bottom: 10px;
+  
+}
+
+.prediction-container-wrapper {
+  border: 2px solid #008080; /* Teal border color */
+  border-radius: 10px; /* Rounded border */
+  padding: 10px; /* Add padding to create space between the content and the border */
+  margin-top: 10px; /* Add margin to create space between images */
+}
+
+.prediction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prediction {
+  font-weight: bold;
+  color: #008080;
+  margin-bottom: 5px; /* Add margin between prediction and inference time */
+}
+
+.inference-time {
+  color: #008080;
+}
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #008080; /* Blue */
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
