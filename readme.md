@@ -18,7 +18,7 @@ To enhance accuracy, I created additional synthetic datasets:
 - Synthetic Dataset 2: Randomly generated addresses using province and district names, converted into image data using PIL.
 - Synthetic Dataset 3: Generated image data from existing poems.
 # TRAINING PHASE
-## 1.INSTALLATION
+## 1. INSTALLATION
 - Ubuntu 18.04.5 LTS
 - CUDA 11.2
 - Python 3.7.5
@@ -30,7 +30,7 @@ $ conda activate envs
 $ pip install -r requirements-training.txt
 $ pip install torch==1.10.1+cu113 torchvision==0.11.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 ```
-## 2.DATA
+## 2. DATA
 * Kalapa dataset.  
 * Vietnamese address dataset `https://github.com/thien0291/vietnam_dataset`  
 * Vietnamese poems corpus: `https://huggingface.co/datasets/phamson02/vietnamese-poetry-corpus`  
@@ -64,7 +64,7 @@ $ python prepare_ext_data.py
 ├── train_folds.csv  
 ├── ...  
 
-## 3.TRAINING
+## 3. TRAINING
 * Pretrained models on synthetic data.  
 ```
 $ python train.py -C b2_256_ptr_f5  
@@ -77,7 +77,7 @@ $ python train.py -C b1_384_f5
 $ python train.py -C b2_256_f5  
 ```
 
-## 4.INFERENCE
+## 4. INFERENCE
 
 * Refer to submitted notebook
 
@@ -118,7 +118,7 @@ $ python train.py -C b2_256_f5
 * Open `frontend/index.html` in your web browser to use the website.
 
 
-## 2. Usage
+## 3. USAGE
 
 * This OCR website detects Vietnamese handwritten text written in one line. When you open the website, you will see two buttons: "Get Images" and "Predict".
 
@@ -128,7 +128,7 @@ $ python train.py -C b2_256_f5
 * **Predict**:
   - After displaying the images, clicking this button will send the selected image to the server. The server will then process the image using the OCR model and return the predicted text.
 
-## 3. Demo video
+## 4. DEMO VIDEO
 
 
 
