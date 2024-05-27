@@ -1,3 +1,4 @@
+# TRAINING PHASE
 ## 1.INSTALLATION
 - Ubuntu 18.04.5 LTS
 - CUDA 11.2
@@ -7,7 +8,7 @@
 ```
 $ conda create -n envs python=3.7.5
 $ conda activate envs
-$ pip install -r requirements.txt
+$ pip install -r requirements-training.txt
 $ pip install torch==1.10.1+cu113 torchvision==0.11.2+cu113 -f https://download.pytorch.org/whl/cu113/torch_stable.html
 ```
 ## 2.DATA
@@ -61,3 +62,38 @@ $ python train.py -C b2_256_f5
 
 * Refer to submitted notebook
 
+# HOW TO RUN THIS WEB-APP
+## 1. INSTALLATION
+1. **Download OCR Test Dataset**:
+   - Download the dataset from [this link](https://drive.google.com/drive/folders/1s3mGm31XuI5v8Q2__-Y5m_9vZZQXtqwI?usp=sharing) and save it to the current folder.
+
+2. **Update Script Paths**:
+   - Open `frontend/script.js`.
+   - Change the `folderPaths` values to the absolute paths of the downloaded dataset.
+
+3. **Install Required Packages**:
+   - Run the following command to install all required packages:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+4. **Start the Flask API Server**:
+   - Use the following command to start the server:
+     ```bash
+     python main.py
+     ```
+
+5. **Open the Website**:
+   - Open `frontend/index.html` in your web browser to use the website.
+
+## 2. Usage
+
+* This OCR website detects Vietnamese handwritten text written in one line. When you open the website, you will see two buttons: "Get Images" and "Predict".
+
+* **Get Images**:
+  - Clicking this button will randomly select 3 images from the test images folder and display them on the website.
+
+* **Predict**:
+  - After displaying the images, clicking this button will send the selected image to the server. The server will then process the image using the OCR model and return the predicted text.
+
+## 3. Demo video
