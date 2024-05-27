@@ -339,6 +339,9 @@ def predict():
         return jsonify({'error': 'No image path provided'})
 
     image_path = request.json['image_path']
+    print(image_path)
+    image_path = image_path[3:]
+    print(image_path)
     if not os.path.exists(image_path):
         return jsonify({'error': 'Image file not found'})
     # Read and decode image

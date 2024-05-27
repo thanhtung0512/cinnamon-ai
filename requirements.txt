@@ -2,8 +2,8 @@ flask
 flask-cors
 flask-restful
 opencv-python
-torch
 numpy
 pandas
 tqdm
+timm
 matplotlib

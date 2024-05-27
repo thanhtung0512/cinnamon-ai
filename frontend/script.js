@@ -31,9 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
     predictions = [];
     inferenceTime = [];
     const folderPaths = [
-      '/home/thanhtung/uet_documents/fpt-ai-residency-projects/dataset/OCR/Level3_samples/504',
-      '/home/thanhtung/uet_documents/fpt-ai-residency-projects/dataset/OCR/Level3_samples/503',
-      '/home/thanhtung/uet_documents/fpt-ai-residency-projects/dataset/OCR/private_test/private_test/images/129',
+      '../dataset/OCR/Level3_samples/504',
+      '../dataset/OCR/Level3_samples/503',
     ];
 
     const imagePaths = [];
