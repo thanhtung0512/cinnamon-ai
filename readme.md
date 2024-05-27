@@ -106,6 +106,18 @@ $ python train.py -C b2_256_f5
 5. **Open the Website**:
    - Open `frontend/index.html` in your web browser to use the website.
 
+## 2. RUN USING DOCKER
+* Build the Docker image:
+   ```bash
+   docker build -t kalapa-app .
+   ```
+*  Run the Docker image:
+   ```bash
+   docker run --network=host -it --rm -p 5000:5000 kalapa-app
+   ```
+* Open `frontend/index.html` in your web browser to use the website.
+
+
 ## 2. Usage
 
 * This OCR website detects Vietnamese handwritten text written in one line. When you open the website, you will see two buttons: "Get Images" and "Predict".
@@ -117,3 +129,7 @@ $ python train.py -C b2_256_f5
   - After displaying the images, clicking this button will send the selected image to the server. The server will then process the image using the OCR model and return the predicted text.
 
 ## 3. Demo video
+
+
+
+ 
