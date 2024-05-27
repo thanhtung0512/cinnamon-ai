@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const folderPaths = [
       '/home/thanhtung/uet_documents/fpt-ai-residency-projects/dataset/OCR/Level3_samples/504',
       '/home/thanhtung/uet_documents/fpt-ai-residency-projects/dataset/OCR/Level3_samples/503',
-      '/home/thanhtung/uet_documents/fpt-ai-residency-projects/dataset/OCR/Level2_samples/403',
+      '/home/thanhtung/uet_documents/fpt-ai-residency-projects/dataset/OCR/private_test/private_test/images/129',
     ];
 
     const imagePaths = [];

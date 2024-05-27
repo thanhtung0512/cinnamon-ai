@@ -1,3 +1,22 @@
+# INRODUCTION
+This project endeavors to create a robust Optical Character Recognition (OCR) system tailored specifically for recognizing Vietnamese handwritten text. Its primary objective is to accurately detect and interpret text inscribed in a single line. Powered by deep learning models adept at handling the intricacies of handwritten text, the system is trained using a blend of real and synthetic data to ensure superior accuracy and versatility.
+
+The project is structured around the following key phases:
+
+- Training Phase: Setting up the environment, data preparation, model training using synthetic and real datasets, and fine-tuning for optimal performance.
+- Inference Phase: Employing the trained models to make predictions on new, unseen data.
+- Web Application: Developing an intuitive web interface to facilitate image uploads and OCR predictions.
+
+This documentation provides comprehensive guidance on installing, preparing data, training models, and utilizing the OCR system and its associated web application. Additionally, it includes a technical overview detailing the key methodologies and components employed in the project.
+
+
+# TECHNICAL OVERVIEW
+I started with the available VietOCR source code on GitHub. To ensure the model size meets the requirements (smaller than 50MB), I replaced the existing backbone with lighter backbones (available in the timm library). Additionally, I used float16 precision to reduce the model size. Specifically, I used two models: EfficientNetV2_B1 (24.5MB) and EfficientNetV2_B2 (22.8MB). The total size of these two models is 47.3MB, which is within the allowed limit.
+
+To enhance accuracy, I created additional synthetic datasets:
+- Synthetic Dataset 1: Augmented version of the competition data.
+- Synthetic Dataset 2: Randomly generated addresses using province and district names, converted into image data using PIL.
+- Synthetic Dataset 3: Generated image data from existing poems.
 # TRAINING PHASE
 ## 1.INSTALLATION
 - Ubuntu 18.04.5 LTS
@@ -61,6 +80,7 @@ $ python train.py -C b2_256_f5
 ## 4.INFERENCE
 
 * Refer to submitted notebook
+
 
 # HOW TO RUN THIS WEB-APP
 ## 1. INSTALLATION
