@@ -129,7 +129,7 @@ $ python train.py -C b2_256_f5
   - After displaying the images, clicking this button will send the selected image to the server. The server will then process the image using the OCR model and return the predicted text.
 
 ## 4. DEMO VIDEO
-
+* Click [here](https://youtu.be/DEpq-Sp9e74) to see a demo video (installation & usage).
 
 
  
